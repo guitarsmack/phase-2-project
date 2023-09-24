@@ -1,0 +1,69 @@
+body {
+  background-color: gray;
+}
+
+.navBar {
+  text-align: center;
+}
+
+.navStyles {
+  display: inline-block;
+  width: 50px;
+  padding: 12px;
+  margin: 6px 6px 6px;
+  background: tan;
+  color: white;
+  border-radius: 15px;
+}
+
+/* .bookContainer {
+  display: flex;
+} */
+
+.card {
+  background: lightblue;
+  width: 10em;
+  padding: 1em;
+  margin: 1em;
+  flex-basis: 23%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.booksBox {
+  display: flex;
+  /* width: 95%; */
+  /* margin: auto; */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.formField {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.formBlock {
+  /* display: inline-flex;
+  flex-direction: column; */
+  /* align-items: center; */
+  text-align: center;
+  margin-top: 20%;
+}
+
+form {
+  display: inline-block;
+  background: white;
+  padding: 5px;
+  border-radius: 3px;
+  width: 50%;
+  font-size: x-large;
+}
+
+label input {
+  float: right;
+  margin-left: 5px;
+  border-radius: 10px;
+}
