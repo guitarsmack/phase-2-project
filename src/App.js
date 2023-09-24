@@ -10,15 +10,19 @@ function App() {
 
   const [bookList,setBookList] = useState([])
 
-    useEffect(() => {
-        fetch("http://localhost:3000/books")
-        .then(resp => resp.json())
-        .then(data => setBookList(data))
-    },[])
+  useEffect(() => {
+      fetch("http://localhost:3000/books")
+      .then(resp => resp.json())
+      .then(data => setBookList(data))
+  },[])
 
   function handleUpdate(newBook){
     setBookList([...bookList,newBook])
   }
+
+  console.log(bookList[1])
+  console.log(bookList[1].name)
+
 
   return(
   <div>
@@ -28,7 +32,7 @@ function App() {
         <Home books={bookList} />
       </Route>
       <Route path="/edit">
-        <Edit />
+        <Edit books={bookList} />
       </Route>
       <Route path="/add">
         <AddBook updateBooks={handleUpdate}/>

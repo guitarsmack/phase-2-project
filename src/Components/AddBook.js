@@ -4,7 +4,7 @@ function AddBook( { updateBooks } ){
 
     const [formData,setFormData] = useState({
         name: "",
-        author: 9,
+        author: "",
         year: "",
         pages: "",
         read: false,

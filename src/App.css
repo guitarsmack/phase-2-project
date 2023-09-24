@@ -6,19 +6,14 @@ body {
   text-align: center;
 }
 
-.navStyles {
-  display: inline-block;
-  width: 50px;
-  padding: 12px;
-  margin: 6px 6px 6px;
-  background: tan;
-  color: white;
-  border-radius: 15px;
+.editBox {
+  padding-top: 5em;
 }
 
-/* .bookContainer {
-  display: flex;
-} */
+.bookSelect {
+  margin-top: 5em;
+  text-align: center;
+}
 
 .card {
   background: lightblue;
@@ -26,9 +21,31 @@ body {
   padding: 1em;
   margin: 1em;
   flex-basis: 23%;
+  border-radius: 5px;
 }
 
 h2 {
+  text-align: center;
+}
+
+.editBox {
+  text-align: center;
+}
+
+.bookForm {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.editForm {
+  background: transparent;
+}
+
+.checkBox {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
   text-align: center;
 }
 
