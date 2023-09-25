@@ -29,10 +29,6 @@ function App() {
     });
     setBookList(newList);
   }
-  
-
-  // console.log(bookList[1])
-  // console.log(bookList[1]?.name)
 
   console.log(bookList)
 
