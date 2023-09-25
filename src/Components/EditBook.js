@@ -1,27 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Book from "./Book";
 
 
-function EditBook({ books, handleEdit }) {
+function EditBook({ handleEdit }) {
     const [comment, setComment] = useState("");
     const [isRead, setIsRead] = useState(false);
+    const [books,setBooks] = useState([])
     const params = useParams();
+
+    useEffect(() => {
+      fetch("https://read-vs-unread-books.onrender.com/books")
+      .then(resp => resp.json())
+      .then(data => setBooks(data))
+    },[])
   
     const currentBook = books.find((book) => book?.name === params.book);
   
     function handleChange(e) {
       setComment(e.target.value);
     }
-  
+
+    // console.log(currentBook?.id)
+
     function handleSubmit(e) {
       e.preventDefault();
       if (!currentBook) {
         console.error("Current book is undefined");
         return;
       }
-  
-      fetch(`http://localhost:3000/books/${currentBook.id}`, {
+      
+
+      fetch(`https://read-vs-unread-books.onrender.com/books/${currentBook?.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -34,6 +44,7 @@ function EditBook({ books, handleEdit }) {
         .then((resp) => resp.json())
         .then(() => {
           e.target.reset();
+          alert("Check home for your updated books!")
           handleEdit({ ...currentBook, comments: comment, read: true });
         })
         .catch((error) => {

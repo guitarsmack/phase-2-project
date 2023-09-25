@@ -11,9 +11,9 @@ function App() {
   const [bookList,setBookList] = useState([])
 
   useEffect(() => {
-      fetch("http://localhost:3000/books")
-      .then(resp => resp.json())
-      .then(data => setBookList(data))
+    fetch("https://read-vs-unread-books.onrender.com/books")
+    .then(resp => resp.json())
+    .then(data => setBookList(data))
   },[])
 
   function handleUpdate(newBook){
@@ -29,8 +29,6 @@ function App() {
     });
     setBookList(newList);
   }
-
-  console.log(bookList)
 
   return(
   <div>

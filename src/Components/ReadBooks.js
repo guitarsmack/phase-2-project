@@ -8,7 +8,7 @@ function ReadBooks({books}){
             <h2>Books I have read:</h2>
             <div className="booksBox">
                 {books.map(book => (
-                    <Book key={book.id} book={book} />
+                    <Book key={book.name} book={book} />
                 ))}
             </div>
         </div>

@@ -3,12 +3,23 @@
 ## Run the application
 
 #### `npm start`
-Start the application with this command and provided you have the server properly running the application will load.
+Start the application with this command, provided you have the server properly running.
 
 ### How the application works
 The `App.js` file has within it the `NavBar.js` component that uses the `NavLink` element to direct the rest of the page. There is also a lot of other work being done on this page that do things like updating the array of books and fetching the initial array of books with a `GET` request.
 
 `Switch` and `Route` then navigate to one of the 3 main components that provide this application functionality: `Home.js`, `Edit.js`, `AddBook.js`.
+
+### create-react-app
+This app was created with the create-react-app command.
+
+### Total Components
+There are a total of 9 components used inside of the `App.js` component not including `App.js`.
+
+### client-side routes
+There are 3 client-side routes in the `NavBar.js` component and another number of these components in the `Edit.js` component, depending on how long the array passed to it is.
+
+
 
 ### Home
 This component simply renders two other components. One renders books that I have read and the other renders books that I look forward to reading. A simple homepage to be the main page of the application.
