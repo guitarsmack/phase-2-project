@@ -2,6 +2,10 @@ import React from "react";
 import Comments from "./Comments";
 
 function Book({ book }){
+
+    if (!book) {
+        return null;
+      }
     
     const { name, author, year, pages, read, comments } = book
 

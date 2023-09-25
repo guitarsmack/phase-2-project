@@ -30,7 +30,10 @@ function AddBook( { updateBooks } ){
             },
             body: JSON.stringify(formData)
         }).then(resp => resp.json())
-        .then(() => updateBooks(formData))
+        .then(() => {
+            e.target.reset()
+            updateBooks(formData)})
+            alert("Check home for an updated list of your books!")
     }
 
     return (

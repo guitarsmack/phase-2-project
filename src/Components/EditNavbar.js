@@ -4,7 +4,9 @@ import { NavLink } from "react-router-dom";
 function EditNavbar( { books } ){
 
     const styleBooks = {
-        padding: "15px",
+        display: "inline-block",
+        padding: "3px",
+        margin: "10px",
         color: "black",
         backgroundColor: "beige"
     }

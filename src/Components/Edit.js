@@ -4,9 +4,7 @@ import EditBook from "./EditBook";
 import EditNavbar from "./EditNavbar";
 
 
-function Edit( { books } ){
-
-    
+function Edit( { books, handleEdit } ){
 
     return (
         <div className="totalEditBox">
@@ -18,7 +16,7 @@ function Edit( { books } ){
                     </div>
                 </Route>
                 <Route path="/edit/:book">
-                    <EditBook books={books} />
+                    <EditBook handleEdit={handleEdit} books={books} />
                 </Route>
             </Switch>
     </div>

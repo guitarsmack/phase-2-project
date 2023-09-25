@@ -19,10 +19,22 @@ function App() {
   function handleUpdate(newBook){
     setBookList([...bookList,newBook])
   }
+  
+  function updateEdit(updatedObj) {
+    const newList = bookList.map((book) => {
+      if (book.name === updatedObj.name) {
+        return updatedObj;
+      }
+      return book; // Return the original book if it doesn't match
+    });
+    setBookList(newList);
+  }
+  
 
-  console.log(bookList[1])
-  console.log(bookList[1].name)
+  // console.log(bookList[1])
+  // console.log(bookList[1]?.name)
 
+  console.log(bookList)
 
   return(
   <div>
@@ -32,7 +44,7 @@ function App() {
         <Home books={bookList} />
       </Route>
       <Route path="/edit">
-        <Edit books={bookList} />
+        <Edit handleEdit={updateEdit} books={bookList} />
       </Route>
       <Route path="/add">
         <AddBook updateBooks={handleUpdate}/>
