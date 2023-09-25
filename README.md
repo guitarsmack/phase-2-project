@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Phase 2 Project README.md
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Run the application
 
-## Available Scripts
+#### `npm start`
+Start the application with this command and provided you have the server properly running the application will load.
 
-In the project directory, you can run:
+### How the application works
+The `App.js` file has within it the `NavBar.js` component that uses the `NavLink` element to direct the rest of the page. There is also a lot of other work being done on this page that do things like updating the array of books and fetching the initial array of books with a `GET` request.
 
-### `npm start`
+`Switch` and `Route` then navigate to one of the 3 main components that provide this application functionality: `Home.js`, `Edit.js`, `AddBook.js`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Home
+This component simply renders two other components. One renders books that I have read and the other renders books that I look forward to reading. A simple homepage to be the main page of the application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### AddBook
+A component that gives the option of adding books to my list of books that I have not read. This list is evergrowing, as there are many books I am looking forward to reading when time eventually allows for it. Submitting this form updates the server with a `POST` request and then will update the list of books used on the `Home` and `Edit` page.
 
-### `npm test`
+### Edit
+This was the most challenging part to me, partially because it was slightly more intricate than the other two as it maps through all the books on the list and renders `Navlink` components for each one.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Each `NavLink` causes the addtional `Route` and `Switch` components on this page to render the book that is selected to edit. 
 
-### `npm run build`
+This made it ore difficult along with a very simple mistake on my part the sent me on a multi-hour chase to figure out what was wrong, resulting in a crash of the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I eventually figured the problem out and was able to get the application to effectively make a `PATCH` request while updating the array being worked with within the entire application.
