@@ -19,13 +19,13 @@ function App() {
   function handleUpdate(newBook){
     setBookList([...bookList,newBook])
   }
-  
+
   function updateEdit(updatedObj) {
     const newList = bookList.map((book) => {
       if (book.name === updatedObj.name) {
         return updatedObj;
       }
-      return book; // Return the original book if it doesn't match
+      return book;
     });
     setBookList(newList);
   }

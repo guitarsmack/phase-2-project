@@ -1,5 +1,4 @@
 import React from "react";
-import Comments from "./Comments";
 
 function Book({ book }){
 
@@ -15,7 +14,7 @@ function Book({ book }){
             <p><strong>Author:</strong> {author}</p>
             <p><strong>Pages:</strong> {pages}</p>
             <p><strong>Year Published:</strong> {year}</p>
-            {read ? <Comments comment={comments} /> : null }
+            {read ? <><h3>Comments: </h3><p>{comments}</p></> : null }
         </div>
         )
 }
