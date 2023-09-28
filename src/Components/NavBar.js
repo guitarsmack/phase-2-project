@@ -9,7 +9,6 @@ function NavBar(){
         padding: "12px",
         margin: "6px 6px 6px",
         background: "tan",
-        color: "white",
         borderRadius: "15px",
         color: "black",
         borderColor: "black",
