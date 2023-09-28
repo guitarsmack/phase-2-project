@@ -35,3 +35,8 @@ Each `NavLink` causes the addtional `Route` and `Switch` components on this page
 This made it ore difficult along with a very simple mistake on my part the sent me on a multi-hour chase to figure out what was wrong, resulting in a crash of the application.
 
 I eventually figured the problem out and was able to get the application to effectively make a `PATCH` request while updating the array being worked with within the entire application.
+
+## Links to projects
+[Front-end](https://marvelous-choux-e0ec7e.netlify.app/) link to function of the project.
+
+[Back-end](https://read-vs-unread-books.onrender.com/books) link to the api of information.
