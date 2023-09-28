@@ -17,17 +17,17 @@ function NavBar(){
       };
 
     return (
-        <div className="navBar">
-            <NavLink style={navStyles} to="/" className="navStyles">
+        <nav className="navBar">
+            <NavLink style={navStyles} exact to="/" >
                 Home
             </NavLink>
-            <NavLink style={navStyles} to="/edit" className="navStyles">
+            <NavLink style={navStyles} to="/edit" >
                 Edit
             </NavLink>
-            <NavLink style={navStyles} to="/add" className="navStyles">
+            <NavLink style={navStyles} to="/add" >
                 Add
             </NavLink>
-        </div>
+        </nav>
     )
 }
 

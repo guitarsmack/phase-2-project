@@ -10,6 +10,24 @@ body {
   padding-top: 5em;
 }
 
+.active {
+  font-weight: bold;
+  background-color: rgb(255, 153, 0) !important;
+}
+
+.navStyles {
+  display: inline-block;
+  width: 50px;
+  padding: 12px;
+  margin: 6px 6px 6px;
+  background: tan;
+  border-radius: 15px;
+  color: black;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
 .bookSelect {
   margin-top: 5em;
   text-align: center;

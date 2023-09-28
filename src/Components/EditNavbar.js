@@ -16,18 +16,17 @@ function EditNavbar( { books } ){
     }
 
     return (
-        <div className="bookSelect">
+        <nav className="bookSelect">
             {books.map(book => {
                 return ( 
                 <NavLink style={styleBooks}
                     key={book.name}
-                    to={`/edit/${book.name}`}
-                    className="navStyles">
+                    to={`/edit/${book.name}`} >
                         {book.name}
                 </NavLink>
                 )
             })}
-        </div>
+        </nav>
     )
 }
 
