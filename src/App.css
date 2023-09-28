@@ -18,6 +18,7 @@ body {
 
 p {
   font-size: smaller;
+  margin-bottom: -.5em;
 }
 
 .card {
@@ -25,7 +26,7 @@ p {
   width: 10em;
   padding: 1em;
   margin: 1em;
-  flex-basis: 23%;
+  flex-basis: 22%;
   border-radius: 5px;
 }
 
@@ -59,13 +60,7 @@ h2 {
   text-align: center;
 }
 
-.booksBox {
-  display: flex;
-  /* width: 95%; */
-  /* margin: auto; */
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+
 
 .formField {
   margin-bottom: 10px;

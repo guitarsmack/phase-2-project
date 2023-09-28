@@ -11,7 +11,7 @@ function Edit( { books, handleEdit } ){
             <EditNavbar books={books} />
             <Switch >
                 <Route exact path="/edit">
-                    <div className="emptyBox">
+                    <div className="editBox">
                         <h1>Choose book to edit!</h1>
                     </div>
                 </Route>
