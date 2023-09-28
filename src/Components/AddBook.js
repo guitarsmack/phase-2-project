@@ -2,6 +2,13 @@ import React, {useState} from "react";
 
 function AddBook( { updateBooks } ){
 
+    const formStyle = {
+        width: "500px",
+        borderColor: "black",
+        borderWidth: "1px",
+        borderStyle: "solid"
+    }
+
     const [formData,setFormData] = useState({
         name: "",
         author: "",
@@ -38,7 +45,7 @@ function AddBook( { updateBooks } ){
 
     return (
         <div className="formBlock">
-            <form onChange={handleChange} onSubmit={handleSubmit} >
+            <form style={formStyle} onChange={handleChange} onSubmit={handleSubmit} >
                 <div className="formField">
                     <label>
                         Book Title:

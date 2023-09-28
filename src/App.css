@@ -1,5 +1,5 @@
 body {
-  background-color: gray;
+  background-color: rgb(184, 184, 184);
 }
 
 .navBar {
@@ -28,6 +28,10 @@ p {
   margin: 1em;
   flex-basis: 22%;
   border-radius: 5px;
+  width: 300px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
 }
 
 h2 {
@@ -40,6 +44,7 @@ h2 {
 
 .commText {
   height: 150px;
+  width: 300px;
 }
 
 .bookForm {

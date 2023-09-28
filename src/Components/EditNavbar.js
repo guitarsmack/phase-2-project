@@ -8,7 +8,11 @@ function EditNavbar( { books } ){
         padding: "3px",
         margin: "10px",
         color: "black",
-        backgroundColor: "beige"
+        backgroundColor: "beige",
+        borderRadius: "5px",
+        borderColor: "black",
+        borderWidth: "1px",
+        borderStyle: "solid"
     }
 
     return (

@@ -11,6 +11,10 @@ function NavBar(){
         background: "tan",
         color: "white",
         borderRadius: "15px",
+        color: "black",
+        borderColor: "black",
+        borderWidth: "1px",
+        borderStyle: "solid"
       };
 
     return (
