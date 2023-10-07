@@ -36,38 +36,59 @@ function AddBook( { updateBooks } ){
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(formData)
-        }).then(resp => resp.json())
-            .then(() => {
-            e.target.reset()
-            updateBooks(formData)})
+        })
+        .then(resp => resp.json())
+        .then((data) => {
+            updateBooks(data)
+            setFormData({
+                name: "",
+                author: "",
+                year: "",
+                pages: "",
+                read: false,
+                comments: ""
+            })
+        })
             alert("Check home for an updated list of your books!")
     }
 
     return (
         <div className="formBlock">
-            <form style={formStyle} onChange={handleChange} onSubmit={handleSubmit} >
+            <form style={formStyle} onSubmit={handleSubmit} >
                 <div className="formField">
                     <label>
                         Book Title:
-                        <input type="text" name="name" />
+                        <input type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}  />
                     </label>
                 </div>
                 <div className="formField">
                     <label>
                         Author:
-                        <input type="text" name="author" />
+                        <input type="text"
+                        name="author"
+                        value={formData.author}
+                        onChange={handleChange}  />
                     </label>
                 </div>
                 <div className="formField">
                     <label>
                         Year Published:
-                        <input type="text" name="year" />
+                        <input type="text"
+                        name="year"
+                        value={formData.year}
+                        onChange={handleChange}  />
                     </label>
                 </div>
                 <div className="formField">
                     <label>
                         Pages:
-                        <input type="text" name="pages" />
+                        <input type="text"
+                        name="pages"
+                        value={formData.pages}
+                        onChange={handleChange}  />
                     </label>
                 </div>
                 <input type="submit" value="Submit Book!" />
