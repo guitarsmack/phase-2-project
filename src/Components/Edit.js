@@ -16,7 +16,7 @@ function Edit( { books, handleEdit } ){
                     </div>
                 </Route>
                 <Route path="/edit/:book">
-                    <EditBook handleEdit={handleEdit} />
+                    <EditBook books={books} handleEdit={handleEdit} />
                 </Route>
             </Switch>
     </div>

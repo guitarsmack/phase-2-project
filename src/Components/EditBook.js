@@ -3,17 +3,11 @@ import { useParams } from "react-router-dom";
 import Book from "./Book";
 
 
-function EditBook({ handleEdit }) {
+function EditBook({ books, handleEdit }) {
     const [comment, setComment] = useState("");
     const [isRead, setIsRead] = useState(false);
-    const [books,setBooks] = useState([])
     const params = useParams();
 
-    useEffect(() => {
-      fetch("https://read-vs-unread-books.onrender.com/books")
-      .then(resp => resp.json())
-      .then(data => setBooks(data))
-    },[])
   
     const currentBook = books.find((book) => book?.name === params.book);
   
@@ -45,7 +39,11 @@ function EditBook({ handleEdit }) {
         .then(() => {
           e.target.reset();
           alert("Check home for your updated books!")
-          handleEdit({ ...currentBook, comments: comment, read: true });
+          handleEdit({
+            ...currentBook,
+            comments: comment,
+            read: true
+          });
         })
         .catch((error) => {
           console.error("Error in fetch request:", error);
