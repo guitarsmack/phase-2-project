@@ -15,8 +15,6 @@ function EditBook({ books, handleEdit }) {
       setComment(e.target.value);
     }
 
-    // console.log(currentBook?.id)
-
     function handleSubmit(e) {
       e.preventDefault();
       if (!currentBook) {
@@ -53,6 +51,7 @@ function EditBook({ books, handleEdit }) {
     if (!currentBook) {
       return <div>Loading...</div>
     }
+    
   
     return (
       <div className="editBox">
@@ -72,6 +71,7 @@ function EditBook({ books, handleEdit }) {
                   onChange={handleChange}
                   className="commText"
                   type="text"
+                  value={comment}
                   name="comments"
                 />
                 <input type="submit" value="Submit Book" />

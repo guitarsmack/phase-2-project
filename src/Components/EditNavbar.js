@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function EditNavbar( { books } ){
 
@@ -19,11 +19,11 @@ function EditNavbar( { books } ){
         <nav className="bookSelect">
             {books.map(book => {
                 return ( 
-                <NavLink style={styleBooks}
+                <Link style={styleBooks}
                     key={book.name}
                     to={`/edit/${book.name}`} >
                         {book.name}
-                </NavLink>
+                </Link>
                 )
             })}
         </nav>

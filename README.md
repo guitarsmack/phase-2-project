@@ -28,15 +28,17 @@ This component simply renders two other components. One renders books that I hav
 A component that gives the option of adding books to my list of books that I have not read. This list is evergrowing, as there are many books I am looking forward to reading when time eventually allows for it. Submitting this form updates the server with a `POST` request and then will update the list of books used on the `Home` and `Edit` page.
 
 ### Edit
-This was the most challenging part to me, partially because it was slightly more intricate than the other two as it maps through all the books on the list and renders `Navlink` components for each one.
+This was the most challenging part to me, partially because it was slightly more intricate than the other two as it maps through all the books on the list and renders `Link` components for each one.
 
-Each `NavLink` causes the addtional `Route` and `Switch` components on this page to render the book that is selected to edit. 
+Each `Link` causes the addtional `Route` and `Switch` components on this page to render the book that is selected to edit. 
 
-This made it ore difficult along with a very simple mistake on my part the sent me on a multi-hour chase to figure out what was wrong, resulting in a crash of the application.
+This made it more difficult along with a very simple mistake on my part that sent me on a multi-hour chase to figure out what was wrong, resulting in a crash of the application.
 
 I eventually figured the problem out and was able to get the application to effectively make a `PATCH` request while updating the array being worked with within the entire application.
 
 ## Links to projects
-[Front-end](https://marvelous-choux-e0ec7e.netlify.app/) link to function of the project.
+[Front-end](https://marvelous-choux-e0ec7e.netlify.app/) link to function of the project. Front-end is hosted on [Netlify](https://www.netlify.com/).
 
-[Back-end](https://read-vs-unread-books.onrender.com/books) link to the api of information.
+[Back-end](https://read-vs-unread-books.onrender.com/books) link to the api of information. Back-end is hosted on [Render](https://render.com/).
+
+[Link](https://hashnode.com/edit/clngr85vl000008l5bj9tbkg3) to my blog post on [Hashnode](https://hashnode.com/) about controlled forms. Talking with the instructor and creating the project from the ground up helped me fully grasp this concept. The blog is a very simple guide on how to use controlled forms for beginners.
